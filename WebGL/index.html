@@ -22,5 +22,9 @@
         const gl = canvas.getContext('webgl');
 
         //Rendering content to WebGL.
+        if (!gl) {
+            //Printing a message notifying the user that WeGL is not avialable.
+            console.log('WebGL unavailable');
+        }
     </script>
 </html>
