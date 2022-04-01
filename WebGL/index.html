@@ -29,8 +29,13 @@
         </script>
         <!-- Adding a script. -->
         <script id="fragment-data" type="not-javascript">
-        
-    </script>
+        </script>
+        <script id="vertex-source" type="not-javascript">
+            attribute vec4 vertex_points;
+            void main() {
+                gl_position = vertex_points;
+            }
+        </script>
     </body>
 
     <!-- Importing a script -->
