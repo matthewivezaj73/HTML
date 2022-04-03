@@ -9,16 +9,16 @@
         <title>WebGL: Canvas Context</title>
         <style>
             canvas {
-                width: 640px;
-                height: 480px;
+                width: 100vw;
+                height: 100vh;
                 display: block;
             }
         </style>
     </head>
     <body>
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas" width="1200" height="600"></canvas>
         <!-- Adding a script. -->
-        <script id="vertex-source" type="not-javascript">
+        <script id="vertex-data" type="not-javascript">
             attribute vec4 vertex_points;
             void main() {
                 gl_position = vertex_points;
@@ -39,7 +39,7 @@
         we’ve instructed the browser to retrieve a WebGLRenderingContext 
         and store it in the constant variable gl
         */
-        const canvas = document.querySelector("#c");
+        const canvas = document.querySelector("#canvas");
         const gl = canvas.getContext('webgl');
 
         //Rendering content to WebGL.
@@ -53,9 +53,13 @@
         else {
             console.log('WebGL is available!')
         }
+        //Setting the buffer width and height
+        console.log(gl.drawingBufferWidth);
+        console.log(gl.drawingBufferHeight)
+        console.log(gl)
         //sets the default color of the canvas to the values of its arguments. 
-        gl.clearColor(1, 0, 0, 1)
-        //instructs the rendering context to reset the color of the canvas to the value defined in the clearColor() function call.
-        gl.clear(gl.COLOR_BUFFER_BIT)
+        // gl.clearColor(1, 0, 0, 1)
+        // //instructs the rendering context to reset the color of the canvas to the value defined in the clearColor() function call.
+        // gl.clear(gl.COLOR_BUFFER_BIT)
     </script>
 </html>
