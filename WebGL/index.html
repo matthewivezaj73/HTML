@@ -59,8 +59,9 @@
         const fsSource = document.querySelector("#fragment-data").text;
         //Compiling shaders into GLSL.
         const vertexShader = gl.createShader(gl.VERTEX_SHADER);
+        //Compiling shader into GLSL
+        gl.shaderSource(vertexShader, vsSource);
 
-        //Compiling the GLSL shaders.
         //Setting the buffer width and height
         console.log(gl.drawingBufferWidth);
         console.log(gl.drawingBufferHeight)
