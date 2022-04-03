@@ -91,6 +91,9 @@
         const program = gl.createProgram()
         //Attach the shaders.
         gl.attachShader(program,vertexShader);
+        gl.attachShader(program, fragmentShader);
+        //Link the shaders.
+        gl.linkProgram(program)
 
     </script>
 </html>
