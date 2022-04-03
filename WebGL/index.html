@@ -69,7 +69,7 @@
             0.7, 0,
             ];
         //Creating an empty buffer object to store the vertex points.
-        
+        const pointsBuffer = gl.createBuffer();
         //Creating a veriable to store the data for our shape's shader.
         const vsSource = document.querySelector("#vertex-data").text;
         //Adding a variable to store data for the fragment shader. 
@@ -90,7 +90,6 @@
         //Creating a container.
         const program = gl.createProgram()
 
-    //Creating a blank buffer to store points.
-    const pointsBuffer = gl.createBuffer();
+
     </script>
 </html>
