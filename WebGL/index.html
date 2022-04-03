@@ -61,6 +61,7 @@
         const vertexShader = gl.createShader(gl.VERTEX_SHADER);
         //Compiling shader into GLSL
         gl.shaderSource(vertexShader, vsSource);
+        gl.compileShader(vertexShader);
 
         //Setting the buffer width and height
         console.log(gl.drawingBufferWidth);
