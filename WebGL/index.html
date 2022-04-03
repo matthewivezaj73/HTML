@@ -52,25 +52,6 @@
         else {
             console.log('WebGL is available!')
         }
-        //Creating a veriable to store the data for our shape's shader.
-        const vsSource = document.querySelector("#vertex-data").text;
-        //Adding a variable to store data for the fragment shader. 
-        //The .text extension saves the word as split text, i.e ['s','p','l','i','t']
-        const fsSource = document.querySelector("#fragment-data").text;
-        //Compiling shaders into GLSL.
-        const vertexShader = gl.createShader(gl.VERTEX_SHADER);
-        //Compiling shader into GLSL
-        gl.shaderSource(vertexShader, vsSource);
-        // Added a compilation for the shader.
-        gl.compileShader(vertexShader);
-        //Adding a variable.
-        const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-        gl.shaderSource(fragmentShader, fsSource);
-        //Compiling the shader.
-        gl.compileShader(fragmentShader).
-
-        //Creating a container.
-        const program = gl.createProgram()
         //Setting the buffer width and height
         console.log(gl.drawingBufferWidth);
         console.log(gl.drawingBufferHeight)
@@ -87,6 +68,26 @@
             -0.7, 0,
             0.7, 0,
             ];
+        //Creating a veriable to store the data for our shape's shader.
+        const vsSource = document.querySelector("#vertex-data").text;
+        //Adding a variable to store data for the fragment shader. 
+        //The .text extension saves the word as split text, i.e ['s','p','l','i','t']
+        const fsSource = document.querySelector("#fragment-data").text;
+        //Compiling shaders into GLSL.
+        const vertexShader = gl.createShader(gl.VERTEX_SHADER);
+        //Compiling shader into GLSL
+        gl.shaderSource(vertexShader, vsSource);
+        // Added a compilation for the shader.
+        gl.compileShader(vertexShader);
+        //Adding a variable.
+        const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+        gl.shaderSource(fragmentShader, fsSource);
+        //Compiling the shader.
+        gl.compileShader(fragmentShader);
+
+        //Creating a container.
+        const program = gl.createProgram()
+
     //Creating a blank buffer to store points.
     const pointsBuffer = gl.createBuffer();
     </script>
