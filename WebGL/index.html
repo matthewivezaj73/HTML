@@ -57,7 +57,8 @@
         //Adding a variable to store data for the fragment shader. 
         //The .text extension saves the word as split text, i.e ['s','p','l','i','t']
         const fsSource = document.querySelector("#fragment-data").text;
-
+        //Compiling shaders into GLSL.
+        const vertexShader = gl.createShader(gl.VERTEX_SHADER);
         //Setting the buffer width and height
         console.log(gl.drawingBufferWidth);
         console.log(gl.drawingBufferHeight)
