@@ -41,10 +41,6 @@
         */
         const canvas = document.querySelector("#canvas");
         const gl = canvas.getContext('webgl');
-        //Creating a veriable to store the data for our shape's shader.
-        const vsSource = document.querySelector("#vertex-data").text;
-        //Adding a variable to store data for the fragment shader.
-        const fsSource = document.querySelector("#fragment-data").text;
         //Rendering content to WebGL.
 
         //Handling the case where gl is not available.
@@ -56,6 +52,7 @@
         else {
             console.log('WebGL is available!')
         }
+
         //Setting the buffer width and height
         console.log(gl.drawingBufferWidth);
         console.log(gl.drawingBufferHeight)
