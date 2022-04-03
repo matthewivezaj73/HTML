@@ -65,6 +65,8 @@
         gl.compileShader(vertexShader);
         //Adding a variable.
         const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+        gl.shaderSource(fragmentShader, fsSource);
+        
         
         //Setting the buffer width and height
         console.log(gl.drawingBufferWidth);
