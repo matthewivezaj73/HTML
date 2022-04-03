@@ -73,6 +73,8 @@
         //Connect the buffer object to store the vertex points.
         gl.bindBuffer(gl.ARRAY_BUFFER, pointsBuffer)
         //Load the vertices into the GL's connected buffer.
+        gl.bindBuffer(gl.ARRAY_BUFFER, new Float32Array(coordinates),
+        gl.STATIS_DRAW);
         //Creating a veriable to store the data for our shape's shader.
         const vsSource = document.querySelector("#vertex-data").text;
         //Adding a variable to store data for the fragment shader. 
