@@ -108,7 +108,7 @@
         //Locating the attribute from the vertex shader source in the program.
         const pointsAttributeLocation = gl.getAttribLocation(program, "vertex_points");
         // Connect the attribute to the points data currently in the buffer object
-
+        gl.vertexAttribPointer(pointsAttributeLocation, 2, gl.FLOAT, false, 0, 0)
 
     </script>
 </html>
