@@ -110,6 +110,7 @@
         // Connect the attribute to the points data currently in the buffer object
         gl.vertexAttribPointer(pointsAttributeLocation, 2, gl.FLOAT, false, 0, 0)
         //Send the points data to the GPU.
+        gl.enableVertexAttribArray(pointsAttributeLocation);
 
     </script>
 </html>
