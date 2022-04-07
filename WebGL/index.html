@@ -27,7 +27,7 @@
         </script>
         <script id="fragment-source" type="not-javascript">
             precision mediump float;
-            
+
             void main() {
                 gl_FragColor = vec4(1, 0, 0, 1.0);
             }
@@ -101,6 +101,9 @@
         gl.attachShader(program, fragmentShader);
         //Link the shaders.
         gl.linkProgram(program)
+
+        // Define the active program defining what the GPU will draw
+        gl.useProgram(program);
 
     </script>
 </html>
