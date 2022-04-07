@@ -20,13 +20,14 @@
         <!-- Adding a script. -->
         <script id="vertex-data" type="not-javascript">
             attribute vec4 vertex_points;
-            
+
             void main() {
                 gl_position = vertex_points;
             }
         </script>
         <script id="fragment-source" type="not-javascript">
             precision mediump float;
+            
             void main() {
                 gl_FragColor = vec4(1, 0, 0, 1.0);
             }
